@@ -26,6 +26,16 @@ pipeline {
     }
 
     post {
+        always {
+            publishHTML([
+                allowMissing: false,
+                alwaysLinkToLastBuild: true,
+                keepAll: true,
+                reportDir: 'test-report',
+                reportFiles: 'index.html',
+                reportName: 'Reporte de Pruebas'
+            ])
+        }
         success {
             echo 'Todas las pruebas pasaron correctamente'
         }
