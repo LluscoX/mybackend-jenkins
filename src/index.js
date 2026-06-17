@@ -49,3 +49,5 @@ const iniciar = async () => {
 };
 
 iniciar();
+
+module.exports = app;
