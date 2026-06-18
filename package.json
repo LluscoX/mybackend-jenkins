@@ -22,19 +22,30 @@
   },
   "devDependencies": {
     "jest": "^30.4.2",
-    "jest-html-reporter": "^4.4.0",
+    "jest-html-reporters": "^3.1.7",
     "nodemon": "^3.0.2",
     "supertest": "^7.2.2"
   },
   "jest": {
     "reporters": [
       "default",
-      ["jest-html-reporter", {
-        "pageTitle": "Reporte de Pruebas - YacuApp Backend",
-        "outputPath": "test-report/index.html",
-        "includeFailureMsg": true,
-        "includeConsoleLog": true
-      }]
+      [
+        "jest-html-reporters",
+        {
+          "publicPath": "test-report",
+          "filename": "index.html",
+          "pageTitle": "Reporte de Pruebas - YacuApp Backend",
+          "logoImgPath": "",
+          "expand": true,
+          "hideIcon": false,
+          "testCommand": "npm test",
+          "openReport": false,
+          "failureMessageOnly": false,
+          "enableMergeData": false,
+          "dataMergeLevel": 1,
+          "inlineSource": true
+        }
+      ]
     ]
   }
 }
